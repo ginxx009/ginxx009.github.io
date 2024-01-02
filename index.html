@@ -91,7 +91,7 @@
 				<div class="col-md-8">
 					<h2>Hello There!</h2>
 					<p>I am Paul Kevin Macandili a graduate of Bachelor of Science In Information Technology.</p>
-					<p>I have been working for 8 years and eversince my career started I have been familiar with Game Development, Web Development and Mobile Development</p>
+					<p>I have been working for <span id="yrsOfExp"></span> years and eversince my career started I have been familiar with Game Development, Web Development and Mobile Development</p>
 					<p>
 						<ul class="fh5co-social-icons">
 							<li><a href="https://github.com/ginxx009"><i class="fab fa-github"></i></a></li>
@@ -522,6 +522,16 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
+
+	<script>
+		let nDate = new Date();
+		let yearsOfExperience = nDate.getFullYear();
+		let firstExperience = 2015;
+		
+		var diff = yearsOfExperience - firstExperience;
+
+		document.getElementById('yrsOfExp').innerHTML = `${diff}`;
+	</script>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
