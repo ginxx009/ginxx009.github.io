@@ -42,11 +42,359 @@
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
+	<!-- Modern premium typography + UI styles -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/resume-ui.css">
+
 	</head>
 	<body>
 		
 	<div class="fh5co-loader"></div>
-	
+
+	<div id="resume-ui">
+		<a class="ru-skip" href="#ru-content">Skip to content</a>
+
+		<nav class="ru-nav" aria-label="Primary navigation">
+			<div class="ru-container ru-nav-inner">
+				<a class="ru-brand" href="#top">
+					<span class="ru-brand-dot" aria-hidden="true"></span>
+					<span>Paul Kevin Macandili</span>
+				</a>
+
+				<div class="ru-nav-links">
+					<a href="#experience">Experience</a>
+					<a href="#projects">Projects</a>
+					<a href="#contact">Contact</a>
+				</div>
+			</div>
+		</nav>
+
+		<main id="ru-content">
+			<section class="ru-hero" id="top">
+				<div class="ru-container ru-hero-grid">
+					<div class="ru-hero-left">
+						<p class="ru-eyebrow">Senior Software Engineer</p>
+						<h1 class="ru-name">Paul Kevin Macandili</h1>
+						<p class="ru-title">Web & Mobile Development • Game Development • DevOps</p>
+
+						<div class="ru-hero-meta" aria-label="Highlights">
+							<div class="ru-metric-card">
+								<div class="ru-metric-k">Experience</div>
+								<div class="ru-metric-v">
+									<span id="ru-yrs-of-exp"></span><span class="ru-metric-s"> years</span>
+								</div>
+							</div>
+
+							<div class="ru-focus-card">
+								<div class="ru-metric-k">Focus</div>
+								<div class="ru-focus-chips" aria-label="Focus areas">
+									<span class="ru-chip">Mobile</span>
+									<span class="ru-chip">Web</span>
+									<span class="ru-chip">DevOps</span>
+									<span class="ru-chip">Game Development</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="ru-hero-actions">
+							<a class="ru-btn ru-btn-primary" href="file/Paul_Kevin_Macandili_CV_2025.pdf" download>Download CV</a>
+							<a class="ru-btn ru-btn-secondary" href="mailto:macandili09@gmail.com?subject=Hello%20Paul%20-%20Resume">Email me</a>
+						</div>
+					</div>
+
+					<div class="ru-side-stack">
+						<div class="ru-profile-card">
+							<div class="ru-profile-inner">
+								<div class="ru-profile-img-wrap">
+									<img class="ru-profile-img" src="images/profile.jpg" alt="Paul Kevin Macandili profile photo">
+								</div>
+								<div class="ru-profile-links" aria-label="Social links">
+									<a class="ru-link-chip" href="https://github.com/ginxx009" target="_blank" rel="noreferrer">GitHub</a>
+									<a class="ru-link-chip" href="https://linkedin.com/in/paulkevinm1995" target="_blank" rel="noreferrer">LinkedIn</a>
+									<a class="ru-link-chip" href="mailto:macandili09@gmail.com">Email</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ru-highlight-card ru-highlight-card--span">
+						<h3 class="ru-highlight-title">Professional summary</h3>
+						<ul class="ru-highlight-list">
+							<li>Technical Lead & Architect blending enterprise leadership with hands-on delivery.</li>
+							<li>Decompose monoliths into resilient, event-driven systems using <strong>Kafka</strong>.</li>
+							<li>Modernize backends and mobile platforms to improve reliability, API responsiveness, and release cadence.</li>
+							<li>Prioritize <strong>developer experience (DX)</strong> and <strong>observability</strong> for dependable business outcomes.</li>
+						</ul>
+
+						<div class="ru-tech-row" aria-label="Core technologies">
+							<span class="ru-tech-chip">Node.js</span>
+							<span class="ru-tech-chip">.NET Core</span>
+							<span class="ru-tech-chip">Kafka</span>
+							<span class="ru-tech-chip">AWS</span>
+							<span class="ru-tech-chip">React Native</span>
+							<span class="ru-tech-chip">Terraform</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="ru-section" id="experience">
+				<div class="ru-container">
+					<header class="ru-section-head">
+						<h2>Experience</h2>
+						<p>Selected roles across application development, DevOps, and game engineering—designed as a clean, premium grid.</p>
+					</header>
+
+					<div class="ru-experience-grid">
+						<article class="ru-exp-card">
+							<h3 class="ru-exp-role">Senior Sub Lead Packaged Application Developer</h3>
+							<p class="ru-exp-company">Accenture Philippines • Nov 2022 – Present</p>
+							<ul class="ru-exp-points">
+								<li>Architected a <strong>Kafka</strong>-based messaging platform to decouple legacy dependencies and enable independent shipping for a sub-team.</li>
+								<li>Scaled high-volume traffic with a focus on <strong>zero data loss</strong> and fault tolerance.</li>
+								<li>Modernized legacy backends (PHP → Node.js) and mobile clients (Titanium → React Native), improving API responsiveness and release cadence.</li>
+								<li>Streamlined CI/CD with unit-test gating and rigorous code review standards to reduce post-release incidents.</li>
+							</ul>
+						</article>
+
+						<article class="ru-exp-card">
+							<h3 class="ru-exp-role">Senior DevOps Engineer (Acting Team Lead)</h3>
+							<p class="ru-exp-company">Asticom Technologies • Apr 2021 – Nov 2022</p>
+							<ul class="ru-exp-points">
+								<li>Automated recurring operational tasks and optimized AWS infrastructure (Lambda, EC2, API Gateway).</li>
+								<li>Mentored junior engineers; defined standardized workflows in JIRA and maintained high code quality through peer reviews.</li>
+								<li>Led strategic migration from legacy PHP on GCP to a modern Node.js stack on AWS with automated testing for zero regression.</li>
+							</ul>
+						</article>
+
+						<article class="ru-exp-card">
+							<h3 class="ru-exp-role">Full-Stack Technical Consultant</h3>
+							<p class="ru-exp-company">Jan 2017 – Apr 2024</p>
+							<ul class="ru-exp-points">
+								<li>Architected and launched end-to-end platforms (Siklo, Tsekmo, Dalakuha), owning technical roadmap, scaling, and delivery.</li>
+								<li>Managed full lifecycle engineering, from system design and database modeling to deploying highly-available cloud-native environments on AWS and GCP.</li>
+								<li>Rapidly prototyped and iterated based on user feedback for reliable performance across web and mobile.</li>
+							</ul>
+						</article>
+
+						<div id="ru-exp-more" class="ru-exp-more">
+							<article class="ru-exp-card ru-exp-card--hidden">
+								<h3 class="ru-exp-role">Professional Development / Continuing Studies</h3>
+								<p class="ru-exp-company">Apr 2014 – Apr 2017</p>
+								<ul class="ru-exp-points">
+									<li>Advanced systems design and software architecture principles.</li>
+									<li>Focused on completing degree requirements and strengthening technical foundations.</li>
+								</ul>
+							</article>
+
+							<article class="ru-exp-card ru-exp-card--hidden">
+								<h3 class="ru-exp-role">Junior Developer</h3>
+								<p class="ru-exp-company">Financial Services Platform • Jan 2013 – Jan 2014</p>
+								<ul class="ru-exp-points">
+									<li>Contributed to backend development and maintenance with emphasis on data integrity and secure transaction processing.</li>
+								</ul>
+							</article>
+						</div>
+					</div>
+
+					<div class="ru-exp-toggle-row">
+						<button id="ru-exp-toggle" class="ru-exp-toggle" type="button" aria-expanded="false">
+							Show more experience
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="ru-section" id="skills">
+				<div class="ru-container">
+					<header class="ru-section-head">
+						<h2>Tech Stack</h2>
+						<p>Programming languages and tools aligned to your CV (grouped for readability).</p>
+					</header>
+
+					<div class="ru-skill-grid">
+						<article class="ru-skill-card">
+							<h3 class="ru-skill-title">Backend & Languages</h3>
+							<div class="ru-tech-row" aria-label="Backend languages">
+								<span class="ru-tech-chip">Node.js</span>
+								<span class="ru-tech-chip">C#</span>
+								<span class="ru-tech-chip">.NET Core</span>
+								<span class="ru-tech-chip">TypeScript</span>
+								<span class="ru-tech-chip">SQL</span>
+							</div>
+						</article>
+
+						<article class="ru-skill-card">
+							<h3 class="ru-skill-title">Infrastructure & Cloud</h3>
+							<div class="ru-tech-row" aria-label="Cloud and infra tools">
+								<span class="ru-tech-chip">AWS</span>
+								<span class="ru-tech-chip">Lambda</span>
+								<span class="ru-tech-chip">EC2</span>
+								<span class="ru-tech-chip">API Gateway</span>
+								<span class="ru-tech-chip">Docker</span>
+								<span class="ru-tech-chip">Kubernetes</span>
+								<span class="ru-tech-chip">Firebase</span>
+							</div>
+						</article>
+
+						<article class="ru-skill-card">
+							<h3 class="ru-skill-title">Data & Messaging</h3>
+							<div class="ru-tech-row" aria-label="Data and messaging">
+								<span class="ru-tech-chip">Kafka</span>
+								<span class="ru-tech-chip">PostgreSQL</span>
+								<span class="ru-tech-chip">MySQL</span>
+								<span class="ru-tech-chip">Redis</span>
+							</div>
+						</article>
+
+						<article class="ru-skill-card">
+							<h3 class="ru-skill-title">DevOps & Tooling</h3>
+							<div class="ru-tech-row" aria-label="DevOps tooling">
+								<span class="ru-tech-chip">Terraform</span>
+								<span class="ru-tech-chip">ArgoCD</span>
+								<span class="ru-tech-chip">GitHub Actions</span>
+								<span class="ru-tech-chip">Jenkins</span>
+								<span class="ru-tech-chip">Jira</span>
+							</div>
+						</article>
+
+						<article class="ru-skill-card">
+							<h3 class="ru-skill-title">Frontend</h3>
+							<div class="ru-tech-row" aria-label="Frontend frameworks">
+								<span class="ru-tech-chip">React JS</span>
+								<span class="ru-tech-chip">React Native</span>
+								<span class="ru-tech-chip">Flutter</span>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="ru-section" id="projects">
+				<div class="ru-container">
+					<header class="ru-section-head">
+						<h2>Projects</h2>
+						<p>
+							Some project materials are not shared publicly due to NDA constraints. Click a project to view available
+							screenshots and a short overview.
+						</p>
+					</header>
+
+					<div class="ru-project-browser" role="list" aria-label="Project list">
+						<button type="button" class="ru-proj-card" data-project="GoMobile" role="listitem">
+							<div class="ru-proj-thumb" style="background-image:url(file/Projects/GoMobile/img1.png);"></div>
+							<div class="ru-proj-text">
+								<div class="ru-proj-name">GoMobile</div>
+								<div class="ru-proj-desc">Tech lead backend: API + Firebase/Lambda auth + DynamoDB.</div>
+							</div>
+							<div class="ru-proj-cta">View details</div>
+						</button>
+
+						<button type="button" class="ru-proj-card" data-project="Games" role="listitem">
+							<div class="ru-proj-thumb" style="background-image:url(file/Projects/Games/img1.png);"></div>
+							<div class="ru-proj-text">
+								<div class="ru-proj-name">Games</div>
+								<div class="ru-proj-desc">Mobile gameplay delivery: UI-to-logic, live streaming, rooms & animations.</div>
+							</div>
+							<div class="ru-proj-cta">View details</div>
+						</button>
+
+						<button type="button" class="ru-proj-card" data-project="Siklo" role="listitem">
+							<div class="ru-proj-thumb" style="background-image:url(file/Projects/Siklo/img1.png);"></div>
+							<div class="ru-proj-text">
+								<div class="ru-proj-name">Siklo</div>
+								<div class="ru-proj-desc">End-to-end from scratch: Firebase + React + React Native + Node.js.</div>
+							</div>
+							<div class="ru-proj-cta">View details</div>
+						</button>
+
+						<button type="button" class="ru-proj-card" data-project="Barter" role="listitem">
+							<div class="ru-proj-thumb"></div>
+							<div class="ru-proj-text">
+								<div class="ru-proj-name">Barter</div>
+								<div class="ru-proj-desc">Full-stack delivery: Node.js + React Native + AWS EC2/RDS.</div>
+							</div>
+							<div class="ru-proj-cta">View details</div>
+						</button>
+
+						<button type="button" class="ru-proj-card" data-project="DalaKuha" role="listitem">
+							<div class="ru-proj-thumb"></div>
+							<div class="ru-proj-text">
+								<div class="ru-proj-name">DalaKuha</div>
+								<div class="ru-proj-desc">Serverless backend: Firebase Functions + Node.js + React/React Native.</div>
+							</div>
+							<div class="ru-proj-cta">View details</div>
+						</button>
+
+						<button type="button" class="ru-proj-card" data-project="Tsekmo" role="listitem">
+							<div class="ru-proj-thumb"></div>
+							<div class="ru-proj-text">
+								<div class="ru-proj-name">Tsekmo</div>
+								<div class="ru-proj-desc">AWS + Firebase platform: EC2 deployment with React + React Native + Node.js.</div>
+							</div>
+							<div class="ru-proj-cta">View details</div>
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<div id="ru-proj-modal-overlay" class="ru-proj-modal-overlay" aria-hidden="true">
+				<div id="ru-proj-modal" class="ru-proj-modal" role="dialog" aria-modal="true" aria-labelledby="ru-proj-modal-title">
+					<div class="ru-proj-modal-head">
+						<div>
+							<div class="ru-proj-modal-eyebrow">Project</div>
+								<h3 id="ru-proj-modal-title" class="ru-proj-modal-title"></h3>
+						</div>
+						<button id="ru-proj-modal-close" class="ru-proj-modal-close" type="button" aria-label="Close project details">×</button>
+					</div>
+
+					<div class="ru-proj-modal-body">
+						<div class="ru-proj-modal-gallery" id="ru-proj-modal-gallery" aria-label="Project screenshots"></div>
+
+						<div class="ru-proj-modal-info">
+							<h4 class="ru-proj-modal-info-title">Overview</h4>
+							<ul class="ru-proj-modal-bullets" id="ru-proj-modal-bullets"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="ru-section ru-section--tight" id="contact">
+				<div class="ru-container">
+					<header class="ru-section-head">
+						<h2>Contact</h2>
+						<p>Let’s connect. I respond quickly for freelance and full-time opportunities.</p>
+					</header>
+
+					<div class="ru-contact-grid">
+						<div class="ru-contact-card">
+							<h3>Contact me</h3>
+							<div class="ru-contact-lines">
+								<a href="mailto:macandili09@gmail.com">macandili09@gmail.com</a>
+								<a href="tel:+639266825842">+63 926 825 842</a>
+							</div>
+						</div>
+
+						<div class="ru-contact-card">
+							<h3>Quick actions</h3>
+							<div class="ru-contact-actions">
+								<a class="ru-btn ru-btn-secondary" href="file/Portfolio.pdf" download>Download Portfolio</a>
+								<a class="ru-btn ru-btn-secondary" href="https://linkedin.com/in/paulkevinm1995" target="_blank" rel="noreferrer">LinkedIn</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="ru-footer">
+			<div class="ru-container ru-footer-inner">
+				<span>© <script>document.write(new Date().getFullYear());</script> Paul Kevin Macandili. All rights reserved.</span>
+				<a href="#top">Back to top</a>
+			</div>
+		</footer>
+	</div>
+
 	<div id="page">	
 	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/profile.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -109,7 +457,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>My Resume</h2>
-					<p><a href="file/MACANDILI PAUL KEVIN BARCON.pdf" download>Download my CV</a></p>
+					<p><a href="file/Paul_Kevin_Macandili_CV_2025.pdf" download>Download my CV</a></p>
 				</div>
 			</div>
 			<div class="row">
@@ -527,38 +875,271 @@
 	</div>
 
 	<script>
-		let nDate = new Date();
-		let yearsOfExperience = nDate.getFullYear();
-		let firstExperience = 2015;
-		
-		var diff = yearsOfExperience - firstExperience;
+		// Premium UI: only compute years-of-experience for the new resume page.
+		(() => {
+			// CV indicates ~12 years experience; keep it stable and not overly noisy.
+			const firstExperience = 2014;
+			const now = new Date();
+			const diff = now.getFullYear() - firstExperience;
+			const el = document.getElementById('ru-yrs-of-exp');
+			if (el) el.textContent = String(diff);
+		})();
 
-		document.getElementById('yrsOfExp').innerHTML = `${diff}`;
+		// Experience section "Show more" toggle (keeps the default view clean).
+		(() => {
+			const toggle = document.getElementById('ru-exp-toggle');
+			if (!toggle) return;
+
+			const hiddenCards = () => document.querySelectorAll('.ru-exp-card--hidden');
+
+			const setExpanded = (expanded) => {
+				toggle.setAttribute('aria-expanded', String(expanded));
+				toggle.textContent = expanded ? 'Show less' : 'Show more experience';
+
+				hiddenCards().forEach((card) => {
+					if (expanded) card.classList.remove('ru-exp-card--hidden');
+				});
+			};
+
+			toggle.addEventListener('click', () => {
+				const expanded = toggle.getAttribute('aria-expanded') === 'true';
+
+				if (expanded) {
+					// Re-hide cards when collapsing.
+					document.querySelectorAll('#ru-exp-more .ru-exp-card').forEach((card) => {
+						card.classList.add('ru-exp-card--hidden');
+					});
+					setExpanded(false);
+					return;
+				}
+
+				// Expand.
+				document.querySelectorAll('#ru-exp-more .ru-exp-card').forEach((card) => {
+					card.classList.remove('ru-exp-card--hidden');
+				});
+				setExpanded(true);
+			});
+		})();
+
+		// Projects modal (screenshots + lorem-ipsum bullets placeholders).
+		(() => {
+			const overlay = document.getElementById('ru-proj-modal-overlay');
+			const closeBtn = document.getElementById('ru-proj-modal-close');
+			const titleEl = document.getElementById('ru-proj-modal-title');
+			const galleryEl = document.getElementById('ru-proj-modal-gallery');
+			const bulletsEl = document.getElementById('ru-proj-modal-bullets');
+			if (!overlay || !closeBtn || !titleEl || !galleryEl || !bulletsEl) return;
+
+			const PROJECTS = {
+				GoMobile: {
+					title: 'GoMobile',
+					imageCount: 5,
+					bullets: [
+						'Designed and implemented the core API layer that powers the full application workflow.',
+						'Built reusable backend functionality and service packages to support feature delivery end-to-end.',
+						'Integrated Gmail-based login for secure and reliable authentication.',
+						'Implemented Firebase services and AWS Lambda functions to handle business logic in a serverless setup.',
+						'Connected and optimized the data layer using DynamoDB for scalable persistence.',
+					],
+				},
+				Games: {
+					title: 'Games',
+					imageCount: 4,
+					bullets: [
+						'Translated UI/UX design into production-ready mobile components, including card and screen animations.',
+						'Owned the baccarat gameplay roadmap and feature implementation plan from planning through release.',
+						'Implemented live streaming connectivity to support real-time session viewing and playback.',
+						'Built a complete animation pipeline (characters, skills, minions, towers, and battle sequences) with shader and performance optimizations.',
+						'Implemented authentication and entry flows via Facebook/Gmail login APIs (including dAppstore login integration).',
+						'Delivered multiplayer session foundations: server/room creation, matchmaking, and consistent server-to-client event handling.',
+						'Implemented gameplay UX features including map/minimap, and ensured efficient build + installer creation for distribution.',
+					],
+				},
+				Siklo: {
+					title: 'Siklo',
+					imageCount: 2,
+					bullets: [
+						'Orchestrated the project end-to-end from scratch: backend, frontend, mobile app, and infrastructure.',
+						'Built the backend foundation using Node.js and Firebase, covering core business logic and system flows.',
+						'Developed the React JS and React Native applications, ensuring consistent UX and reliable feature delivery.',
+						'Set up and maintained the deployment/infrastructure layer to support production-ready releases on the Firebase stack.',
+					],
+				},
+				Barter: {
+					title: 'Barter',
+					imageCount: 2,
+					autoDetectMax: 8,
+					bullets: [
+						'Owned the full solution delivery using Node.js, React Native, AWS EC2, and RDS.',
+						'Designed and implemented backend services and APIs with performance and reliability in mind.',
+						'Integrated the mobile client with server-side capabilities for a complete end-to-end experience.',
+						'Configured and supported AWS infrastructure components (EC2 + RDS) for stable production operation.',
+					],
+				},
+				DalaKuha: {
+					title: 'DalaKuha',
+					imageCount: 1,
+					autoDetectMax: 8,
+					bullets: [
+						'Led full-stack implementation from end to end using React JS, Firebase Functions, Node.js, and React Native.',
+						'Built backend services and serverless logic (Firebase Functions + Node.js) to support product workflows.',
+						'Developed the React and React Native clients with consistent UX and dependable data handling.',
+						'Managed the integration points between frontend and backend to ensure smooth real-time and transactional behavior.',
+					],
+				},
+				Tsekmo: {
+					title: 'Tsekmo',
+					imageCount: 1,
+					autoDetectMax: 8,
+					bullets: [
+						'Orchestrated the system from scratch using Firebase, AWS (EC2), React JS, React Native, and Node.js.',
+						'Implemented backend services and real-time flows with Node.js and Firebase integrations.',
+						'Delivered the React JS + React Native applications with a focus on stability, usability, and performance.',
+						'Deployed and supported the infrastructure layer on AWS EC2 for reliable runtime operation.',
+					],
+				},
+			};
+
+			const buildImageCandidates = (projectKey) => {
+				const p = PROJECTS[projectKey];
+				if (!p) return [];
+
+				const max = p.imageCount && p.imageCount > 0 ? p.imageCount : (p.autoDetectMax ?? 0);
+				if (!max) return [];
+
+				// Some projects use .png, others use .PNG, and some use .jpg/.JPG.
+				// Probe multiple extensions so screenshots always render.
+				const exts = ['png', 'PNG', 'jpg', 'JPG'];
+
+				const candidates = [];
+				for (let i = 1; i <= max; i++) {
+					for (const ext of exts) {
+						candidates.push(`file/Projects/${projectKey}/img${i}.${ext}`);
+					}
+				}
+
+				return candidates;
+			};
+
+			const detectExistingImages = async (srcs) => {
+				// Load-probe images in parallel; keep only the ones that actually exist.
+				const probes = srcs.map((src) => new Promise((resolve) => {
+					const probeImg = new Image();
+					probeImg.onload = () => resolve(src);
+					probeImg.onerror = () => resolve(null);
+					probeImg.src = src;
+				}));
+
+				const results = await Promise.all(probes);
+				return results.filter(Boolean);
+			};
+
+			const openProject = async (projectKey) => {
+				const p = PROJECTS[projectKey];
+				if (!p) return;
+
+				titleEl.textContent = p.title;
+
+				galleryEl.innerHTML = '';
+				const imageCandidates = buildImageCandidates(projectKey);
+				const indexFromSrc = (src) => {
+					// Extract the "N" from imgN.<ext>
+					const match = String(src).match(/img(\d+)\./i);
+					return match ? Number(match[1]) : null;
+				};
+
+				if (imageCandidates.length === 0) {
+					const placeholder = document.createElement('div');
+					placeholder.className = 'ru-proj-img-placeholder';
+					placeholder.textContent = `Screenshots coming soon for ${p.title} (add img1.png, img2.png, etc.).`;
+					galleryEl.appendChild(placeholder);
+				} else {
+					// Auto-detect for placeholders (empty folders).
+					const existing = await detectExistingImages(imageCandidates);
+					if (!existing.length) {
+						const placeholder = document.createElement('div');
+						placeholder.className = 'ru-proj-img-placeholder';
+						placeholder.textContent = `Screenshots coming soon for ${p.title} (add img1.png, img2.png, etc.).`;
+						galleryEl.appendChild(placeholder);
+					} else {
+						// Deduplicate by index (prefer first existing in candidate order).
+						const byIndex = new Map();
+						existing.forEach((src) => {
+							const idx = indexFromSrc(src);
+							if (idx == null) return;
+							if (!byIndex.has(idx)) byIndex.set(idx, src);
+						});
+
+						const ordered = Array.from(byIndex.keys()).sort((a, b) => a - b).map((k) => byIndex.get(k));
+
+						ordered.forEach((src, i) => {
+							const a = document.createElement('a');
+							a.href = src;
+							a.target = '_blank';
+							a.rel = 'noreferrer';
+							a.className = 'ru-proj-img-link';
+
+							const img = document.createElement('img');
+							img.className = 'ru-proj-img';
+							img.loading = 'lazy';
+							img.src = src;
+							img.alt = `${p.title} screenshot ${i + 1}`;
+
+							a.appendChild(img);
+							galleryEl.appendChild(a);
+						});
+					}
+				}
+
+				bulletsEl.innerHTML = '';
+				p.bullets.forEach((b) => {
+					const li = document.createElement('li');
+					li.textContent = b;
+					bulletsEl.appendChild(li);
+				});
+
+				overlay.classList.add('open');
+				overlay.setAttribute('aria-hidden', 'false');
+				document.body.style.overflow = 'hidden';
+				closeBtn.focus();
+			};
+
+			const closeProject = () => {
+				overlay.classList.remove('open');
+				overlay.setAttribute('aria-hidden', 'true');
+				document.body.style.overflow = '';
+			};
+
+			document.querySelectorAll('.ru-proj-card[data-project]').forEach((btn) => {
+				btn.addEventListener('click', () => openProject(btn.dataset.project));
+			});
+
+			// Populate card thumbnails (img1) using flexible extensions.
+			(() => {
+				const extOrder = ['png', 'PNG', 'jpg', 'JPG'];
+				const cards = Array.from(document.querySelectorAll('.ru-proj-card[data-project]'));
+				cards.forEach(async (btn) => {
+					const projectKey = btn.dataset.project;
+					const thumb = btn.querySelector('.ru-proj-thumb');
+					if (!projectKey || !thumb) return;
+
+					const candidates = extOrder.map((ext) => `file/Projects/${projectKey}/img1.${ext}`);
+					const existing = await detectExistingImages(candidates);
+					if (existing.length > 0) {
+						thumb.style.backgroundImage = `url(${existing[0]})`;
+					}
+				});
+			})();
+
+			closeBtn.addEventListener('click', closeProject);
+			overlay.addEventListener('click', (e) => {
+				if (e.target === overlay) closeProject();
+			});
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape' && overlay.classList.contains('open')) closeProject();
+			});
+		})();
 	</script>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	<!-- Google Map -->
-	<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSe7iwe6ZVG-6tef5UKbWd3_D95eM240c&callback=initMap">
-    </script>
-	<script src="js/google_map.js"></script>
-
-	<!-- Font Awesome -->
-	<script src="https://use.fontawesome.com/a25c5b2922.js"></script>
-	
-	<!-- Main -->
-	<script src="js/main.js"></script>
 
 	</body>
 </html>
