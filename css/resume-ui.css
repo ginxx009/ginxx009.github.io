@@ -723,10 +723,25 @@ body{
 }
 
 .ru-proj-desc{
-  color: rgba(36, 48, 67, 0.76);
-  font-weight: 750;
-  font-size: 13px;
+  margin-top: 8px;
+  color: rgba(36, 48, 67, 0.92);
+  font-weight: 820;
+  font-size: clamp(12px, 1.1vw, 13px);
   line-height: 1.35;
+  padding: 8px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 123, 255, 0.30);
+  background: rgba(0, 123, 255, 0.10);
+  box-shadow: 0 14px 40px rgba(0, 123, 255, 0.10);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.ru-proj-desc strong{
+  font-weight: 950;
 }
 
 .ru-proj-cta{
@@ -844,6 +859,54 @@ body{
   line-height: 1.4;
 }
 
+/* Image lightbox inside the projects modal */
+.ru-proj-img-lightbox{
+  position: absolute;
+  inset: 0;
+  z-index: 220;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+.ru-proj-img-lightbox.open{
+  display: flex;
+}
+
+.ru-proj-img-lightbox-inner{
+  position: relative;
+  width: min(980px, 96vw);
+}
+
+.ru-proj-img-lightbox-img{
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 18px;
+  border: 1px solid rgba(36, 48, 67, 0.14);
+  box-shadow: 0 30px 90px rgba(15, 23, 42, 0.22);
+  background: rgba(248, 246, 242, 0.92);
+}
+
+.ru-proj-img-lightbox-close{
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 123, 255, 0.22);
+  background: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 123, 255, 0.95);
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+  line-height: 1;
+}
+
 .ru-proj-modal-info-title{
   margin: 0 0 10px;
   font-size: 15px;
@@ -851,16 +914,33 @@ body{
   letter-spacing: -0.01em;
 }
 
+.ru-proj-modal-info{
+  border-radius: 18px;
+  border: 1px solid rgba(0, 123, 255, 0.32);
+  background: rgba(0, 123, 255, 0.10);
+  padding: 16px 16px 12px;
+  box-shadow: 0 18px 42px rgba(0, 123, 255, 0.12);
+}
+
 .ru-proj-modal-bullets{
-  padding-left: 18px;
+  padding-left: 16px;
   margin: 0;
-  color: rgba(36, 48, 67, 0.86);
-  font-weight: 780;
+  color: rgba(20, 38, 62, 0.96);
+  font-weight: 760;
 }
 
 .ru-proj-modal-bullets li{
   margin: 10px 0;
   line-height: 1.45;
+  padding-left: 10px;
+  border-left: 3px solid rgba(0, 123, 255, 0.50);
+  border-radius: 14px;
+  background: rgba(248, 246, 242, 0.65);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.04);
+}
+
+.ru-proj-modal-info-title{
+  color: rgba(0, 123, 255, 0.95);
 }
 
 @media (max-width: 980px){
@@ -871,7 +951,101 @@ body{
     grid-template-columns: 1fr;
   }
   .ru-proj-modal-gallery{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .ru-proj-desc{
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+}
+
+/* Email modal */
+.ru-email-modal-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 230;
+  background: rgba(15, 23, 42, 0.38);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+.ru-email-modal-overlay.open{
+  display: flex;
+}
+
+.ru-email-modal{
+  width: min(860px, 96vw);
+  background: rgba(248, 246, 242, 0.95);
+  border: 1px solid rgba(36, 48, 67, 0.14);
+  border-radius: 20px;
+  box-shadow: 0 30px 90px rgba(15, 23, 42, 0.22);
+  overflow: auto;
+}
+
+.ru-email-modal-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 18px 12px;
+  border-bottom: 1px solid rgba(36, 48, 67, 0.10);
+}
+
+.ru-email-modal .ru-email-form{
+  padding: 16px 18px 18px;
+}
+
+.ru-email-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ru-email-input,
+.ru-email-textarea{
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(36, 48, 67, 0.14);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--text);
+  padding: 12px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  outline: none;
+  box-shadow: 0 14px 40px rgba(0, 123, 255, 0.05);
+}
+
+.ru-email-textarea{
+  resize: vertical;
+  min-height: 150px;
+}
+
+.ru-email-input:focus,
+.ru-email-textarea:focus{
+  border-color: rgba(0, 123, 255, 0.45);
+}
+
+.ru-email-actions{
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 560px){
+  .ru-email-grid{
+    grid-template-columns: 1fr;
+  }
+  .ru-email-actions{
+    justify-content: stretch;
+  }
+  .ru-email-actions .ru-btn{
+    width: 100%;
   }
 }
 
@@ -882,8 +1056,23 @@ body{
   .ru-proj-modal-gallery{
     grid-template-columns: 1fr;
   }
+  .ru-proj-desc{
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
   .ru-proj-img{
     height: 190px;
+  }
+
+  .ru-proj-img-lightbox{
+    padding: 12px;
+  }
+
+  .ru-proj-img-lightbox-close{
+    top: -8px;
+    right: -8px;
+    width: 40px;
+    height: 40px;
   }
 }
 
