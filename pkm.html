@@ -13,13 +13,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/pkm.css?v=20260912g" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('pkm-theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m) m.setAttribute('content', t === 'light' ? '#f3efe6' : '#09090b');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="css/pkm.css?v=20260912h" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="#top"><span class="mark">PKM</span><span>Paul Kevin Macandili</span></a>
+      <div class="nav-end">
       <nav class="nav-links" aria-label="Primary">
         <a href="#products">Products</a>
         <a href="#work">Work</a>
@@ -29,7 +45,12 @@
         <a href="#contact">Contact</a>
         <a class="btn btn-primary" href="file/Paul_Kevin_Macandili_CV_2025.pdf" download>Curriculum vitae</a>
       </nav>
+      <button class="theme-btn" type="button" aria-label="Toggle light and dark theme" data-theme-toggle>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+      </button>
       <button class="menu-btn" type="button" aria-label="Open menu" data-menu>☰</button>
+      </div>
     </div>
     <div class="wrap mobile-nav" id="mobile-nav" hidden>
       <a href="#products">Products</a>
@@ -513,7 +534,13 @@
   </footer>
 
   <script>
-    document.querySelector('[data-menu]').addEventListener('click', function () {
+    document.querySelector('[data-theme-toggle]').addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('pkm-theme', next); } catch (e) {}
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) m.setAttribute('content', next === 'light' ? '#f3efe6' : '#09090b');
+    });
       var nav = document.getElementById('mobile-nav');
       var open = nav.hasAttribute('hidden');
       if (open) { nav.removeAttribute('hidden'); nav.setAttribute('open', ''); }
