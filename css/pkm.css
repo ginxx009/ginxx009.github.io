@@ -76,9 +76,9 @@ section { border-top: 1px solid var(--border); padding: 5rem 0; }
 .sec-h h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; margin: 0.75rem 0 0; text-wrap: balance; }
 .sec-h p { color: var(--muted); margin: 1rem 0 0; text-wrap: pretty; }
 .work { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3rem 0 0; padding: 0; list-style: none; }
-.work li:first-child { grid-column: 1 / -1; }
+.work li:first-child, .work li:last-child:nth-child(even) { grid-column: 1 / -1; }
 .card { display: flex; flex-direction: column; overflow: hidden; background: var(--surface); border-radius: 16px; box-shadow: var(--shadow); color: inherit; text-align: left; border: 0; width: 100%; min-width: 0; }
-.work li:first-child .card { display: grid; grid-template-columns: 1fr 1fr; }
+.work li:first-child .card, .work li:last-child:nth-child(even) .card { display: grid; grid-template-columns: 1fr 1fr; }
 .work.stack-cards { grid-template-columns: 1fr; }
 .work.stack-cards li { grid-column: 1 / -1; }
 .work.stack-cards .card { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
@@ -122,7 +122,7 @@ dialog::backdrop { background: color-mix(in oklab, var(--bg) 80%, transparent); 
   .nav-links { display: none; }
   .menu-btn { display: grid; place-items: center; }
   .hero-grid { grid-template-columns: 1fr; grid-template-rows: none; }
-  .work, .work li:first-child .card, .work.stack-cards .card, .timeline li, .split, .split-3, .stack, .contact { grid-template-columns: 1fr; }
+  .work, .work li:first-child .card, .work li:last-child:nth-child(even) .card, .work.stack-cards .card, .timeline li, .split, .split-3, .stack, .contact { grid-template-columns: 1fr; }
   .photo { grid-column: auto; grid-row: auto; order: 2; justify-self: center; max-width: 22rem; min-height: 22rem; }
   .photo img { position: absolute; }
   .metrics { grid-column: auto; order: 3; grid-template-columns: 1fr; }
